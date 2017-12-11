@@ -283,7 +283,7 @@ class Swivel extends Application
 
 	private override function init() : Void {
 		#if !debug
-			if(!_isCmdLine) ui.add(new SplashScreen());
+			//if(!_isCmdLine) ui.add(new SplashScreen());
 		#end
 
 		_previewGenerator = new PreviewGenerator();
@@ -779,7 +779,7 @@ class Swivel extends Application
 			fileSizeText.text = (Std.int(e.fileSize / (1024*1024) * 10)/ 10) + " MB";
 			videoNameText.text = e.outputFile.name;
 			
-			new CompleteSound().play();
+			//new CompleteSound().play();
 			orderToFront();
 		} else {
 			NativeApplication.nativeApplication.exit(0);

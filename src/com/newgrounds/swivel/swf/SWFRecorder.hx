@@ -34,6 +34,9 @@ import flash.geom.Matrix;
 import flash.geom.Rectangle;
 import flash.system.LoaderContext;
 import flash.system.System;
+import flash.filesystem.File;
+import flash.filesystem.FileMode;
+import flash.filesystem.FileStream;
 
 /**
  * ...
@@ -191,6 +194,12 @@ class SWFRecorder {
 			trace(e.error);
 			e.preventDefault();
 		});
+
+		var swfFile = new File(File.applicationStorageDirectory.resolvePath('modified-2017.swf').nativePath);
+		var swfStream = new FileStream();
+		swfStream.open(swfFile, FileMode.WRITE);
+		swfStream.writeBytes(_swf.getBytes().getData());
+		
 		_loader.loadBytes(_swf.getBytes().getData(), loaderContext);
 		_window.stage.addChild(_loader);
 		

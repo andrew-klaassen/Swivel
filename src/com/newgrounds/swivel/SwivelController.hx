@@ -208,18 +208,18 @@ class SwivelController extends com.huey.binding.Binding.Bindable implements Cont
 					default: 0;
 				}
 
-				_swfMutators.add( new SwivelMutator(startFrame) );
-				if(job.forceBitmapSmoothing) _swfMutators.add( new BitmapSmoothingMutator() );
-				if(job.swf.version >= 8) _swfMutators.add( new ScaleFilterMutator(_recorder.outputWidth / job.swf.width) );
-				if(Type.enumEq(audioSource, swf)) { // TODO
-					_audioTracker = new AudioTracker();
-					switch(_parsedSwf.avmVersion) {
-						case AVM1: _swfMutators.add( new SoundConnectionMutator("__swivel", _audioTracker) );
-						case AVM2: _swfMutators.add( new AS3SoundConnectionMutator("__swivel", _audioTracker) );
-					}
-				}
-				_swfMutators.add( new SilenceSoundMutator() );
-				for (mutator in _swfMutators) mutator.mutate(job.swf);
+				//_swfMutators.add( new SwivelMutator(startFrame) );
+				//if(job.forceBitmapSmoothing) _swfMutators.add( new BitmapSmoothingMutator() );
+				//if(job.swf.version >= 8) _swfMutators.add( new ScaleFilterMutator(_recorder.outputWidth / job.swf.width) );
+				//if(Type.enumEq(audioSource, swf)) { // TODO
+				//	_audioTracker = new AudioTracker();
+				//	switch(_parsedSwf.avmVersion) {
+				//		case AVM1: _swfMutators.add( new SoundConnectionMutator("__swivel", _audioTracker) );
+				//		case AVM2: _swfMutators.add( new AS3SoundConnectionMutator("__swivel", _audioTracker) );
+				//	}
+				//}
+				//_swfMutators.add( new SilenceSoundMutator() );
+				//for (mutator in _swfMutators) mutator.mutate(job.swf);
 				runNextTask();
 
 			case EncodeSwf(job):
