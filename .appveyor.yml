@@ -47,4 +47,4 @@ test_script:
   - makensis win-installer.nsi
 
 artifacts:
-  - path: swivel-win32.exe
+  - path: swivel-win64.exe
