@@ -108,7 +108,7 @@ Section "Swivel" SecSwivel
   WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\Swivel" \
                  "HelpLink" "http://www.newgrounds.com"
   WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\Swivel" \
-                 "DisplayVersion" "1.11"
+                 "DisplayVersion" "1.13"
   WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\Swivel" \
                  "VersionMajor" "1"
   WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\Swivel" \
